@@ -1,0 +1,643 @@
+{
+    "type": "object",
+    "properties": {
+      "workflow_step": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "status": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "control_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "details": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "ppc": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "ppc_source": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "build_fax_roof_age": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "public_protection_class": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "roof_age": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "total_rate": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "quote": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "coverages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "coverage_name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "coverage": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "limit": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "dedutible": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "required": []
+            }
+          }
+        },
+        "required": [
+          "coverages"
+        ]
+      },
+      "loss_runs": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "claim_address1": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "claim_address2": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "claim_amount_incurred": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "claim_city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "claim_county": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "claim_number": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "claim_recovery": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "claim_state": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "claim_status": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "claim_tpa_paid": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "claim_tpa_reserve": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "claim_zip": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "underwriting_decisions": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "underwriten": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "underwriten"
+        ]
+      },
+      "auto_decline": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "decline": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "rule_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rule": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "uw_reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "broker_reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": []
+            }
+          }
+        },
+        "required": [
+          "decline",
+          "rule_list"
+        ]
+      },
+      "auto_qualification": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "qualification": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "rule_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rule": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "uw_reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "broker_reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": []
+            }
+          }
+        },
+        "required": [
+          "qualification",
+          "rule_list"
+        ]
+      },
+      "audit_log": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "workflow_step": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "location_buildings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "loc_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "loc_address1": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "loc_address2": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "loc_appia_location_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "loc_city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "loc_county": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "loc_number": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "loc_physical_building_number": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "loc_single_physical_building_number": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "Loc_state": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "loc_zip": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "building_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "appia_building_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "building_description": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "building_number": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "building_usage": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "building_value_from_app": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "building_value_selected": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "burglar_alarm_type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "business_income": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "business_personal_property_value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "cladding": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "class_code_desc": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "construction_type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "distance_to_fire_hydrant_in_feet": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "distance_to_fire_station_in_miles": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "fire_alarm_type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "has_lro": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "heating_year": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "ims_building_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "misc_real_property": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "number_of_basements": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "number_of_stories": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "number_of_units": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "plumbing_year": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "public_protection_class": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "roof_anchor": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "roof_covering": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "roof_equipment_features": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "roof_geometry": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "roofing_year": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "sprinkler_alarm_type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "sprinkler_extent": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "sprinkler_wet_dry": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "square_footage": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "wiring_year": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "wkfc_detailed_occupancy": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "wkfc_major_occupancy": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "year_built": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          },
+          "required": []
+        }
+      },
+      "reports": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "report_location_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    "required": []
+  }
